@@ -1,0 +1,148 @@
+<html>
+    <head>
+<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="calculator">
+                <form style="width: 100%;">
+                    <input type="text" placeholder="0" id="input-1" style="width: 100%; height: 60px;font-size: 20px; background:#f0f1f6; border:none">
+                </form>
+                <div id="col"><button class="btn" id="clear" >AC</button></div>
+                <div id="col"> <button class="btn" id="pos-neg" >+/-</button></div>
+                <div id="col"><button class="btn" id="percent" >%</button></div>
+                <div id="col"> <button class="btn" id="divide">/</button></div>
+                <div id="col"><button class="btn" id="seven" >7</button></div>
+                <div id="col"><button class="btn" id="eight" >8</button></div>
+                <div id="col"><button class="btn" id="nine">9</button></div>
+                <div id="col"><button class="btn" id="multiply" >*</button></div>
+                <div id="col"><button class="btn" id="four" >4</button></div>
+                <div id="col"><button class="btn" id="five">5</button></div>
+                <div id="col"><button class="btn" id="six" >6</button></div>
+                <div id="col"><button class="btn" id="sub" >-</button></div>
+                <div id="col"><button class="btn" id="one" >1</button></div>
+                <div id="col"><button class="btn" id="two">2</button></div>
+                <div id="col"><button class="btn" id="three">3</button></div>
+                <div id="col"><button class="btn" id="sum">+</button></div>
+                <div id="col" ><button class="btn" id="zero">0</button></div>
+                <div id="col"><button class="btn" id="dot" >.</button></div>
+                <div id="col" ><button class="btn" id="equal" >=</button></div>
+
+            </div>
+        </div>
+        <script>
+            var a,b,c,d;
+            var input_1=document.getElementById("input-1");
+
+            var btn_zero=document.getElementById("zero");
+            btn_zero.onclick=function(){
+                input_1.value+=0;
+            }
+            var btn_one=document.getElementById("one");
+                btn_one.onclick=function(){
+                    input_1.value+=1;
+                }
+                var btn_two=document.getElementById("two");  
+               btn_two.onclick=function(){
+                    input_1.value+=2;
+                }
+                var btn_three=document.getElementById("three");  
+               btn_three.onclick=function(){
+                    input_1.value+=3;
+                }
+                var btn_four=document.getElementById("four");  
+               btn_four.onclick=function(){
+                    input_1.value+=4;
+                }
+                var btn_five=document.getElementById("five");  
+               btn_five.onclick=function(){
+                    input_1.value+=5;
+                }
+                var btn_six=document.getElementById("six");  
+               btn_six.onclick=function(){
+                    input_1.value+=6;
+                }
+                var btn_seven=document.getElementById("seven");  
+               btn_seven.onclick=function(){
+                    input_1.value+=7;
+                }
+                var btn_eight=document.getElementById("eight");  
+               btn_eight.onclick=function(){
+                    input_1.value+=8;
+                }
+                var btn_nine=document.getElementById("nine");  
+               btn_nine.onclick=function(){
+                    input_1.value+=9;
+                }
+                var btn_clear=document.getElementById("clear");
+                btn_clear.onclick=function(){
+                    input_1.value=" ";
+                }
+               var btn_percent=document.getElementById("percent");
+                btn_percent.onclick=function(){
+                   input_1.value+="%";
+                   d="percent";
+                }
+                var btn_sum=document.getElementById("sum");
+                 btn_sum.onclick=function(){
+                a= parseInt(input_1.value);
+                input_1.value="";
+                d="sum";
+                }
+                var btn_sub=document.getElementById("sub");
+                btn_sub.onclick=function (){
+                a= parseInt(input_1.value);
+                input_1.value=" ";
+                d="sub"; 
+                }
+                var btn_mul=document.getElementById("multiply");
+                btn_mul.onclick=function(){
+                    a=parseInt(input_1.value);
+                    input_1.value=" ";
+                    d="multiply";
+                }
+                var btn_devide=document.getElementById("divide");
+                btn_devide.onclick=function(){
+                    input_1.value+="/";
+                    d="divide";
+                }
+               var btn_decimal=document.getElementById("dot");
+               btn_decimal.onclick=function(){
+                   input_1.value+=".";
+               }
+               var btn_pos_neg=document.getElementById("pos-neg");
+                btn_pos_neg.onclick=function(){
+                    if(input_1.value>0){
+                        input_1.value*=-1;
+                    }
+                    else if(input_1.value<0){
+                        input_1.value*=-1;
+                    }
+                }
+              var btn_equal=document.getElementById("equal");
+               btn_equal.onclick=function(){
+                   if(d=="sum") {
+                    var b=parseInt(input_1.value);
+                    c=a+b;
+                    input_1.value=c;
+                   }
+                   else if(d=="sub"){
+                    var b=parseInt(input_1.value);
+                       c=a-b;
+                       input_1.value= c;
+                   }
+                   else if(d=="multiply"){
+                   var b=parseInt(input_1.value);
+                        c=a*b;
+                       input_1.value= c;
+                   }
+                   else if(d=="divide" | d=="percent"){
+
+                    input_1.value=eval(input_1.value);
+                   }
+                }
+                  
+              
+        </script>
+    </body>
+</html>

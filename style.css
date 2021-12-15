@@ -1,0 +1,48 @@
+body
+{
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+}
+#container
+{
+    background: ;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0px;
+}
+#calculator
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    justify-content: space-between;
+    background:#f0f1f6;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    box-shadow: 3px 5px 7px #ffffff99 ,-3px -5px 7px #d7d8dd;
+}
+#col
+{
+    display: flex;
+    width: 20%;
+    margin: 5px;
+    
+}
+.btn
+{
+    width: 100%;
+    border-radius: 10px;
+    border-style:none;
+    border-width: 5px;
+    font-size: 20px;
+    background: #f0f1f6;
+    margin: ;
+}
+.btn:hover
+{
+    background-color: #323330;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
